@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">VintedExamenSeCa</string>
+    <string name="passwordLogin">Password</string>
+    <string name="loginButton">Login</string>
+    <string name="addProducto">Añadir Producto</string>
+    <string name="categorias">Ver produuctos por categorias</string>
+</resources>
