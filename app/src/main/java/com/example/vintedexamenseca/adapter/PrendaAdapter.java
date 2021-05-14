@@ -1,5 +1,7 @@
 package com.example.vintedexamenseca.adapter;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.vintedexamenseca.Detail.Detail_lstPrendas;
 import com.example.vintedexamenseca.R;
 import com.example.vintedexamenseca.beans.Prenda;
 
@@ -34,8 +37,9 @@ public class PrendaAdapter extends RecyclerView.Adapter<PrendaAdapter.PrendaView
     }
     }
 
+public PrendaAdapter(ArrayList<Prenda> lstPrenda){
+        this.lstPrenda = lstPrenda; }
 
-    public PrendaAdapter(ArrayList<Prenda> lstPrenda){this.lstPrenda = lstPrenda;}
 
     @NonNull
     @Override
@@ -49,17 +53,24 @@ public class PrendaAdapter extends RecyclerView.Adapter<PrendaAdapter.PrendaView
     @Override
     public void onBindViewHolder(@NonNull PrendaViewHolder holder, int position) {
 
-        final  Prenda prenda = lstPrenda.get(position);
+        Prenda prenda = lstPrenda.get(position);
         holder.nom_prenda.setText(prenda.getNom_prenda());
         holder.marca.setText(prenda.getMarca());
         holder.precio.setText(String.valueOf(prenda.getPrecio()));
 
-        //Detalle de la prenda
-        holder.cardView.setOnClickListener(v -> {
+       holder.cardView.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                Intent detalle = new Intent(holder.cardView.getContext(), Detail_lstPrendas.class);
 
+                Bundle extras = new Bundle();
+                extras.putString(Detail_lstPrendas.ARG_EXTRAS_DESCRIPCION, prenda.getDescripcion());
 
+                detalle.putExtras(extras);
+                holder.cardView.getContext().startActivity(detalle);
 
+            }
         });
 
 

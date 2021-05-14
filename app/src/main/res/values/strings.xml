@@ -4,4 +4,8 @@
     <string name="loginButton">Login</string>
     <string name="addProducto">Añadir Producto</string>
     <string name="categorias">Ver produuctos por categorias</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="descripcionPrenda">Descripcion</string>
+    <string name="Fragment_descripcion">descripcion</string>
 </resources>

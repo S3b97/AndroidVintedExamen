@@ -15,7 +15,7 @@ import retrofit2.Response;
 
 public class LstPrendasModel implements LstPrendasContract.Model {
     @Override
-    public void getPrendasWS(Context context, OnLstPrendasListener onLstPrendasListener) {
+    public void getPrendasWS(Context context, final OnLstPrendasListener onLstPrendasListener) {
         APIClient apiClient = new APIClient(context);
         final Call<List<Prenda>> peticion = apiClient.getPrendas();
 

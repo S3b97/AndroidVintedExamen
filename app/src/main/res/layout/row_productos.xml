@@ -14,17 +14,12 @@
     card_view:cardUseCompatPadding="true">
 
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/purple_700"
+        android:layout_height="match_parent"
+        android:background="#3D92DC"
         android:orientation="horizontal">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="5dp">
-    </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -44,7 +39,7 @@
                     android:id="@+id/txtMarca"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Macra"
+                    android:text="Marca"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -61,7 +56,7 @@
 
             </LinearLayout>
 
-        </RelativeLayout>
+        </LinearLayout>
 
 
 </com.google.android.material.card.MaterialCardView>

@@ -18,7 +18,7 @@ public class APIClient {
     private Context context;
     private Usuario usuario;
 
-    private static final String BASE_URL = "http://192.168.1.130:8080/";
+    private static final String BASE_URL = "http://192.168.1.40:8080/";
 
 
     public APIClient(Context context){

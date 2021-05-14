@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.vintedexamenseca">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -10,8 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".lst_prendas.view.LstPrendasView"></activity>
+
         <activity android:name=".main_screen" />
+        <activity android:name=".Detail.Detail_lstPrendas"/>
+        <activity android:name=".lst_prendas.view.LstPrendasView"/>
         <activity android:name=".addUser.View.activity_login" />
         <activity android:name=".MainActivity">
             <intent-filter>
